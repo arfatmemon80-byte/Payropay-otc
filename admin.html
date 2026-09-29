@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Site Settings</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<!-- ============================= LOGIN SCREEN ============================= -->
+<section id="loginScreen" class="admin-login-wrap">
+  <form id="loginForm" class="glass admin-card admin-login-card">
+    <h1>Admin Login</h1>
+    <p class="admin-sub">Sign in to edit live site settings. Changes save instantly — no redeploy needed.</p>
+    <div class="field">
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" autocomplete="current-password" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Sign In</button>
+    <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
+    <p class="admin-note">This only works when deployed on Cloudflare Pages with the admin backend configured. See README.md.</p>
+  </form>
+</section>
+
+<!-- ============================= EDITOR SCREEN ============================= -->
+<section id="editorScreen" class="admin-editor-wrap" hidden>
+  <header class="admin-header">
+    <div class="wrap admin-header-inner">
+      <h1>Site Settings</h1>
+      <div class="admin-header-actions">
+        <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">View Site ↗</a>
+        <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap admin-content">
+    <p class="form-status" id="saveStatus" role="status" aria-live="polite"></p>
+
+    <form id="configForm">
+
+      <div class="admin-card glass">
+        <h2>Business Identity</h2>
+        <div class="calc-row two-col">
+          <div class="field">
+            <label for="fBusinessName">Business Name</label>
+            <input type="text" id="fBusinessName">
+          </div>
+          <div class="field">
+            <label for="fContactEmail">Contact Email</label>
+            <input type="email" id="fContactEmail">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fTelegram">Telegram Username (without @, e.g. yourdeskusername)</label>
+          <input type="text" id="fTelegram">
+        </div>
+      </div>
+
+      <div class="admin-card glass">
+        <h2>Hero Text</h2>
+        <div class="field">
+          <label for="fHeadline">Headline</label>
+          <textarea id="fHeadline" rows="2"></textarea>
+        </div>
+        <div class="field">
+          <label for="fSubheadline">Subheadline</label>
+          <textarea id="fSubheadline" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="admin-card glass">
+        <h2>Contact Form Endpoint</h2>
+        <p class="admin-sub">Leave endpoint blank to keep the "contact us on Telegram" fallback message.</p>
+        <div class="field">
+          <label for="fFormEndpoint">Google Forms (or other) submission URL</label>
+          <input type="url" id="fFormEndpoint" placeholder="https://docs.google.com/forms/d/e/FORM_ID/formResponse">
+        </div>
+        <p class="admin-sub" style="margin-top:8px;">Google Forms field IDs (entry.XXXXXXX) — only needed if using Google Forms:</p>
+        <div class="admin-grid-3">
+          <div class="field"><label for="fMapFullName">Full Name</label><input type="text" id="fMapFullName"></div>
+          <div class="field"><label for="fMapEmail">Email</label><input type="text" id="fMapEmail"></div>
+          <div class="field"><label for="fMapPhone">Phone</label><input type="text" id="fMapPhone"></div>
+          <div class="field"><label for="fMapAsset">Cryptocurrency</label><input type="text" id="fMapAsset"></div>
+          <div class="field"><label for="fMapAmount">Amount</label><input type="text" id="fMapAmount"></div>
+          <div class="field"><label for="fMapNetwork">Network</label><input type="text" id="fMapNetwork"></div>
+          <div class="field"><label for="fMapContactMethod">Contact Method</label><input type="text" id="fMapContactMethod"></div>
+          <div class="field"><label for="fMapMessage">Message</label><input type="text" id="fMapMessage"></div>
+        </div>
+      </div>
+
+      <div class="admin-card glass">
+        <div class="admin-card-head">
+          <h2>Supported Assets</h2>
+          <button type="button" class="btn btn-ghost btn-sm" id="addAssetBtn">+ Add Asset</button>
+        </div>
+        <div id="assetRows" class="asset-rows"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" id="saveBtn">Save Changes</button>
+    </form>
+  </div>
+</section>
+
+<template id="assetRowTemplate">
+  <div class="asset-row">
+    <div class="field"><label>Symbol</label><input type="text" data-field="symbol" placeholder="BTC"></div>
+    <div class="field"><label>Name</label><input type="text" data-field="name" placeholder="Bitcoin"></div>
+    <div class="field"><label>CoinGecko ID</label><input type="text" data-field="id" placeholder="bitcoin"></div>
+    <div class="field"><label>Icon</label><input type="text" data-field="icon" placeholder="₿"></div>
+    <div class="field"><label>Networks (comma-separated)</label><input type="text" data-field="networks" placeholder="TRC20, ERC20"></div>
+    <button type="button" class="btn-remove-row" aria-label="Remove asset">✕</button>
+  </div>
+</template>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

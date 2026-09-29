@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sell Crypto for INR | Professional Crypto OTC Desk</title>
+<meta name="description" content="Sell supported cryptocurrencies through a transparent and professional transaction process. Calculate indicative INR value and contact our crypto desk.">
+<meta name="theme-color" content="#0A0D12">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sell Crypto for INR | Professional Crypto OTC Desk">
+<meta property="og:description" content="A transparent, compliance-focused process to sell BTC, ETH, USDT, USDC, TRX, SOL and BNB for INR.">
+<meta property="og:type" content="website">
+
+<!-- Free Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" id="brandName">
+      <span class="brand-logo-chip"><img src="assets/icons/logo.png" alt="PayroPay" class="brand-logo" id="brandLogo"></span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#calculator">Calculator</a>
+      <a href="#how-it-works">Process</a>
+      <a href="#assets">Assets</a>
+      <a href="#compliance">Compliance</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Sell Crypto</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Crypto OTC Desk · India</p>
+        <h1 id="heroHeadline">Sell Your Crypto.<br>Get INR Through A Professional Process.</h1>
+        <p class="hero-sub" id="heroSubheadline">8+ years of experience in crypto markets, with a transparent and compliance-focused process for customers looking to sell digital assets.</p>
+        <div class="hero-actions">
+          <a href="#calculator" class="btn btn-primary">Sell Crypto</a>
+          <a href="#contact" class="btn btn-ghost" id="talkToDeskHero">Talk To Our Desk</a>
+        </div>
+        <ul class="trust-row" aria-label="Trust indicators">
+          <li><span class="trust-num">8+</span> Years Experience</li>
+          <li>Transparent Pricing</li>
+          <li>KYC/AML Process</li>
+          <li>Compliance-Focused</li>
+        </ul>
+      </div>
+
+      <div class="hero-panel">
+        <!-- ===================== LIVE CALCULATOR ===================== -->
+        <div class="calc-card glass" id="calculator">
+          <div class="calc-head">
+            <h2>Calculate Your Estimated INR Value</h2>
+            <span class="calc-status" id="calcStatus">
+              <span class="dot" id="calcDot"></span>
+              <span id="calcStatusText">Connecting to market data…</span>
+            </span>
+          </div>
+
+          <div class="calc-row two-col">
+            <div class="field">
+              <label for="assetSelect">Cryptocurrency</label>
+              <select id="assetSelect"></select>
+            </div>
+            <div class="field" id="networkField" hidden>
+              <label for="networkSelect">Network</label>
+              <select id="networkSelect"></select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="amountInput">Crypto Amount</label>
+            <input type="number" min="0" step="any" inputmode="decimal" id="amountInput" placeholder="e.g. 10,000">
+          </div>
+
+          <div class="calc-readout">
+            <div class="readout-row">
+              <span>Indicative Rate</span>
+              <strong id="rateOut">₹ —</strong>
+            </div>
+            <div class="readout-row main">
+              <span>Estimated INR Value</span>
+              <strong id="totalOut">₹ 0</strong>
+            </div>
+            <p class="last-updated" id="lastUpdated">Last updated: —</p>
+          </div>
+
+          <p class="calc-disclaimer">Indicative market rate only. Final transaction pricing may vary based on market conditions, liquidity, transaction size, network fees and applicable transaction terms.</p>
+
+          <button class="btn btn-primary btn-block" id="sellThisAmountBtn">Sell This Amount</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= COMPLIANCE ============================= -->
+  <section class="section" id="compliance">
+    <div class="wrap narrow">
+      <h2>Built Around Compliance</h2>
+      <p class="section-lead">Digital-asset transactions can involve regulatory, banking, tax and payment-related requirements. Our transaction process is designed with applicable Indian laws, regulatory requirements and appropriate verification procedures in mind.</p>
+
+      <div class="compliance-grid">
+        <div class="compliance-item"><h3>KYC</h3><p>Identity verification prior to transaction execution.</p></div>
+        <div class="compliance-item"><h3>AML / CFT</h3><p>Screening consistent with anti-money-laundering and counter-terrorist-financing norms.</p></div>
+        <div class="compliance-item"><h3>Transaction Verification</h3><p>Review of transaction source, size and counterpart details.</p></div>
+        <div class="compliance-item"><h3>Applicable VDA Requirements</h3><p>Handling in line with applicable virtual digital asset provisions.</p></div>
+        <div class="compliance-item"><h3>Applicable FEMA Requirements</h3><p>Considered where relevant to cross-border or settlement aspects.</p></div>
+        <div class="compliance-item"><h3>Record Keeping</h3><p>Transaction records retained as required for review and audit.</p></div>
+        <div class="compliance-item"><h3>Tax / Reporting</h3><p>Processed with applicable tax and reporting requirements in mind.</p></div>
+        <div class="compliance-item"><h3>Banking &amp; Payment Requirements</h3><p>Settlement conducted in line with banking and payment-provider requirements.</p></div>
+      </div>
+      <p class="compliance-footnote">Transactions are subject to applicable laws, regulatory requirements, verification procedures and our terms.</p>
+    </div>
+  </section>
+
+  <!-- ============================= HOW IT WORKS ============================= -->
+  <section class="section alt" id="how-it-works">
+    <div class="wrap">
+      <h2>How It Works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Tell Us What You Want To Sell</h3>
+          <p>Select your cryptocurrency and approximate amount.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Receive A Quote</h3>
+          <p>Our desk reviews the transaction and provides applicable pricing and terms.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Complete Verification</h3>
+          <p>Complete required KYC and transaction verification procedures.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">04</span>
+          <h3>Settlement</h3>
+          <p>After completion of the agreed transaction process, settlement is initiated through the applicable payment method.</p>
+        </div>
+      </div>
+      <div class="center-cta">
+        <a href="#contact" class="btn btn-primary">Start A Transaction</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SUPPORTED ASSETS ============================= -->
+  <section class="section" id="assets">
+    <div class="wrap">
+      <h2>Supported Assets</h2>
+      <p class="section-lead">Indicative pricing shown below, refreshed automatically from live market data.</p>
+      <div class="asset-grid" id="assetGrid"><!-- populated by script.js --></div>
+    </div>
+  </section>
+
+  <!-- ============================= WHY US ============================= -->
+  <section class="section alt" id="why-us">
+    <div class="wrap">
+      <h2>Why Sell Through Our Desk</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>8+ Years Experience</h3>
+          <p>Experience across changing crypto market conditions.</p>
+        </div>
+        <div class="why-card">
+          <h3>Transparent Process</h3>
+          <p>Understand applicable pricing and terms before proceeding.</p>
+        </div>
+        <div class="why-card">
+          <h3>Compliance Focus</h3>
+          <p>Appropriate verification and transaction procedures.</p>
+        </div>
+        <div class="why-card">
+          <h3>Direct Support</h3>
+          <p>Speak directly with the transaction desk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= LARGE TRANSACTION ============================= -->
+  <section class="section large-tx">
+    <div class="wrap narrow center">
+      <h2>Selling A Larger Amount?</h2>
+      <p class="section-lead">Speak directly with our desk to discuss the asset, transaction size, pricing, verification requirements and settlement process.</p>
+      <a href="#contact" class="btn btn-primary" id="largeTxCta">Speak With Our OTC Desk</a>
+    </div>
+  </section>
+
+  <!-- ============================= FAQ ============================= -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What cryptocurrencies do you buy?</summary>
+          <p>We support selected digital assets including BTC, ETH, USDT, USDC, TRX, SOL and BNB, subject to availability, network support and transaction review.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How is the calculator price determined?</summary>
+          <p>The calculator displays an indicative market-based rate. Final pricing may vary based on market conditions, liquidity, transaction size, network fees and applicable terms.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you require KYC?</summary>
+          <p>Applicable KYC and transaction verification requirements may apply depending on the transaction and applicable requirements.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is the calculator rate final?</summary>
+          <p>No. The calculator provides an indicative estimate. A final quote is provided before execution.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can you guarantee my bank account will never be frozen?</summary>
+          <p>No service can guarantee actions taken by banks, payment providers or other third parties. We focus on transparent procedures and compliance-focused transaction handling.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you handle larger transactions?</summary>
+          <p>Subject to transaction review, liquidity, verification and applicable terms, larger transactions can be discussed directly with our desk.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= CONTACT / QUOTE FORM ============================= -->
+  <section class="section alt" id="contact">
+    <div class="wrap narrow">
+      <h2>Request A Quote</h2>
+      <p class="section-lead">Share a few details and our desk will get back to you with applicable pricing and next steps.</p>
+
+      <form id="quoteForm" class="quote-form" novalidate>
+        <div class="form-row two-col">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row two-col">
+          <div class="field">
+            <label for="phone">Telegram / Phone</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="contactMethod">Preferred Contact Method</label>
+            <select id="contactMethod" name="contactMethod">
+              <option value="Telegram">Telegram</option>
+              <option value="Phone Call">Phone Call</option>
+              <option value="Email">Email</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row three-col">
+          <div class="field">
+            <label for="formAsset">Cryptocurrency</label>
+            <select id="formAsset" name="asset"></select>
+          </div>
+          <div class="field">
+            <label for="formAmount">Amount</label>
+            <input type="number" min="0" step="any" id="formAmount" name="amount" placeholder="e.g. 10000">
+          </div>
+          <div class="field" id="formNetworkField" hidden>
+            <label for="formNetwork">Network</label>
+            <select id="formNetwork" name="network"></select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Anything else our desk should know"></textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" id="consentCheck" required>
+          <span>I understand that calculator rates are indicative and transactions may be subject to verification, compliance requirements and applicable terms.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block" id="submitQuoteBtn">Request A Quote</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <p class="brand" id="brandNameFooter">
+          <span class="brand-logo-chip"><img src="assets/icons/logo.png" alt="PayroPay" class="brand-logo"></span>
+        </p>
+        <p class="footer-tagline">Professional crypto OTC desk · India</p>
+      </div>
+      <div class="footer-contact">
+        <a id="footerEmail" href="#">desk@example.com</a>
+        <a href="#contact">Request a quote</a>
+      </div>
+    </div>
+
+    <div class="risk-box">
+      <h3>Important Information</h3>
+      <p>Cryptocurrency transactions involve market, regulatory, operational, counterparty and payment-related risks.</p>
+      <p>Displayed cryptocurrency prices are indicative and may change rapidly.</p>
+      <p>Final transaction pricing and settlement are subject to applicable transaction terms, verification, liquidity, market conditions, network conditions and applicable laws and regulations.</p>
+      <p>Nothing on this website constitutes investment, financial, legal or tax advice.</p>
+    </div>
+
+    <p class="copyright">© <span id="year"></span> <span id="brandNameCopy">PayroPay</span>. All rights reserved. · <a href="admin.html" class="admin-link">Admin</a></p>
+  </div>
+</footer>
+
+<!-- ============================= FLOATING TELEGRAM ============================= -->
+<a href="#" class="telegram-float" id="telegramFloat" target="_blank" rel="noopener" aria-label="Talk to our desk on Telegram">
+  <svg viewBox="0 0 240 240" aria-hidden="true" focusable="false"><path fill="currentColor" d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm55.6 82.2-19.6 92.5c-1.5 6.6-5.4 8.2-10.9 5.1l-30.1-22.2-14.5 14c-1.6 1.6-3 3-6.1 3l2.2-30.9 56.2-50.8c2.4-2.2-.5-3.4-3.8-1.2l-69.5 43.8-29.9-9.4c-6.5-2-6.6-6.5 1.4-9.6l117-45.1c5.4-2 10.1 1.3 8.6 10.8z"/></svg>
+</a>
+
+<!-- ============================= MOBILE STICKY CTA ============================= -->
+<div class="sticky-mobile-cta">
+  <a href="#calculator" class="btn btn-primary btn-block">Sell Crypto</a>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
